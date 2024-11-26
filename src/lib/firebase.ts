@@ -8,13 +8,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAbL_QpGWq8N6mtLykQFIQWEfb1BF4r59M",
-  authDomain: "workout-tracker-7ec51.firebaseapp.com",
-  projectId: "workout-tracker-7ec51",
-  storageBucket: "workout-tracker-7ec51.firebasestorage.app",
-  messagingSenderId: "291603222546",
-  appId: "1:291603222546:web:f759aca5da22f18790c8cb",
-  measurementId: "G-NXL27H8FW1"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 // Initialize Firebase

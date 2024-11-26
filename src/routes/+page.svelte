@@ -22,10 +22,10 @@
     <h2 class="text-2xl font-bold text-gray-800 mb-4">Logged Workouts</h2>
   
     <!-- Show user-specific workouts -->
-    {#if user}
-      {#if $workouts.filter(workout => workout.uid === user.uid).length > 0}
+
+      {#if user!== null && $workouts.filter(workout => workout.uid === user!.uid).length > 0}
         <ul class="space-y-4">
-          {#each $workouts.filter(workout => workout.uid === user.uid) as workout}
+          {#each $workouts.filter(workout => workout.uid === user!.uid) as workout}
             <li class="border p-4 rounded-lg shadow">
               <h3 class="text-lg font-bold text-gray-800">Workout ID: {workout.id}</h3>
               <ul class="space-y-2 mt-2">
@@ -39,9 +39,8 @@
             </li>
           {/each}
         </ul>
-      {:else}
+      {:else if user !== null}
         <p>No workouts logged yet. Start tracking your workouts!</p>
-      {/if}
     {:else}
       <p>Please log in to view your workouts.</p>
     {/if}

@@ -3,6 +3,8 @@
   import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
   import type { User } from "firebase/auth";
 
+  
+
   let email = "";
   let password = "";
   let user: User | null = null;
